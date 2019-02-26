@@ -142,7 +142,7 @@ void MainWindow::makeDesiredData(QMap<QString, QStringList> &mapCatData)
   m_strLineTextList.clear();
 
   m_strLineTextList << "***"
-                    << "`Version:` 5.11.1"
+                    << "`Version:` Qt 5.12.0, QtCreate 4.8.1"
                     << "`Declaration:`"
                     << "`Defination:`"
                     << "`Reference:`"
