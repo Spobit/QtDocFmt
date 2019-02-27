@@ -9,7 +9,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    setWindowTitle("Qt docmentation format transfer - Esc");
+    setWindowTitle("QtDocmentationFormatTransfer-Esc");
 }
 
 MainWindow::~MainWindow()
@@ -142,7 +142,7 @@ void MainWindow::makeDesiredData(QMap<QString, QStringList> &mapCatData)
     m_strLineTextList.clear();
 
     m_strLineTextList << "***"
-                      << "`Version:` Qt 5.12.0, QtCreate 4.8.1"
+                      << "`Version:` Qt 5.12.1, QtCreate 4.8.1"
                       << "`Declaration:`"
                       << "`Defination:`"
                       << "`Reference:`"
