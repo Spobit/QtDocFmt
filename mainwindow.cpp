@@ -9,7 +9,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    setWindowTitle("QtDocmentationFormatTransfer-Esc");
+    setWindowTitle("Qt docmentation format transfer - Esc");
 }
 
 MainWindow::~MainWindow()

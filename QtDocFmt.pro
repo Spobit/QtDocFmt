@@ -6,7 +6,7 @@
 
 QT       += core gui widgets
 
-TARGET = "Qt docmentation format transfer - Esc"
+TARGET = "QtDocmentationFormatTransfer-Esc"
 DESTDIR = $${PWD}/bin
 TEMPLATE = app
 
