@@ -40,13 +40,10 @@ void MainWindow::keyPressEvent(QKeyEvent* event)
                           << "`Keyword:`"
                           << "***"
                           << "[TOC]"
-                          << "***"
-                          << "\n\n";
+                          << "***";
 
         m_strLineTextList << "# `Brief Introduction`"
-                          << "\n\n"
                           << "# `Detailed Description`"
-                          << "\n\n"
                           << "# `Data Struct`"
                           << "## `Type Declaration`"
                           << "```"
@@ -63,8 +60,7 @@ void MainWindow::keyPressEvent(QKeyEvent* event)
                           << "```"
                           << "## `Memory Model`"
                           << "```"
-                          << "```"
-                          << "\n\n";
+                          << "```";
 
         m_strLineTextList << "# `Properties`";
 
@@ -210,13 +206,10 @@ void MainWindow::makeDesiredData(QMap<QString, QStringList> &mapCatData)
                       << "`Keyword:`"
                       << "***"
                       << "[TOC]"
-                      << "***"
-                      << "\n\n";
+                      << "***";
 
     m_strLineTextList << "# `Brief Introduction`"
-                      << "\n\n"
                       << "# `Detailed Description`"
-                      << "\n\n"
                       << "# `Data Struct`"
                       << "## `Type Declaration`"
                       << "```"
@@ -233,8 +226,7 @@ void MainWindow::makeDesiredData(QMap<QString, QStringList> &mapCatData)
                       << "```"
                       << "## `Memory Model`"
                       << "```"
-                      << "```"
-                      << "\n\n";
+                      << "```";
 
     QString strFinalHdr, strFinalItem;
     foreach (QString strHdr, m_strHdrs)
@@ -259,8 +251,6 @@ void MainWindow::makeDesiredData(QMap<QString, QStringList> &mapCatData)
                                       << "`Remark:`"
                                       << "`Eg 0:`";
                 }
-
-                m_strLineTextList << "\n\n";
             }
         }
     }
