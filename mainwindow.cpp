@@ -146,7 +146,7 @@ void MainWindow::makeDesiredData(QMap<QString, QStringList> &mapCatData)
                       << "`Declaration:`"
                       << "`Defination:`"
                       << "`Reference:`"
-                      << "`Keyword:` \\[\\]"
+                      << "`Keyword:`"
                       << "***"
                       << "[TOC]"
                       << "***"
