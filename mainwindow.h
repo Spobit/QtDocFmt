@@ -43,6 +43,36 @@ protected:
     void dataToPlainTextEdit();
 
 private:
+    void head();
+    void toc();
+    void briefIntroduction();
+    void detailedDescrition();
+    void dataStuct();
+
+    void properties();
+    void publicTypes();
+    void publicFunctions();
+    void ReimplementedPublicFunctions();
+    void publicSlots();
+    void staticPublicMembers();
+
+    void protectedTypes();
+    void protectedFunctions();
+    void ReimplementedProtectedFunctions();
+    void protectedSlots();
+    void staticProtectedMembers();
+
+    void privateTypes();
+    void privateTypesFunctions();
+    void ReimplementedPrivateFunctions();
+    void privateTypesSlots();
+    void staticPrivateMembers();
+
+    void signalsKey();
+    void relatedNonMembers();
+    void macros();
+
+private:
     Ui::MainWindow *ui;
     QString m_strFinalText;
     QStringList m_strLineTextList;

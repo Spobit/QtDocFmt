@@ -29,7 +29,66 @@ void MainWindow::keyPressEvent(QKeyEvent* event)
     if (Qt::Key_Escape != event->key()) return;
 
     if(makeFinalData())
-        QMessageBox::information(this, "Err", "maek data failed!");
+    {
+        m_strLineTextList.clear();
+
+        m_strLineTextList << "***"
+                          << "`Version:` Qt 5.12.1, QtCreate 4.8.1"
+                          << "`Declaration:`"
+                          << "`Defination:`"
+                          << "`Reference:`"
+                          << "`Keyword:`"
+                          << "***"
+                          << "[TOC]"
+                          << "***"
+                          << "\n\n";
+
+        m_strLineTextList << "# `Brief Introduction`"
+                          << "\n\n"
+                          << "# `Detailed Description`"
+                          << "\n\n"
+                          << "# `Data Struct`"
+                          << "## `Type Declaration`"
+                          << "```"
+                          << "class Q_CORE_EXPORT QString"
+                          << "{"
+                          << "///> 0. Prepare"
+                          << "///> 1. Properties"
+                          << "///> 2. Constructor"
+                          << "///> 3. Functions"
+                          << "}"
+                          << "```"
+                          << "## `Constructor`"
+                          << "```"
+                          << "```"
+                          << "## `Memory Model`"
+                          << "```"
+                          << "```"
+                          << "\n\n";
+
+        m_strLineTextList << "# `Properties`";
+
+        m_strLineTextList << "# `Public Types`";
+        m_strLineTextList << "# `Public Functions`";
+        m_strLineTextList << "# `Reimplemented Public Functions`";
+        m_strLineTextList << "# `Public Slots`";
+        m_strLineTextList << "# `Static Public Members`";
+
+        m_strLineTextList << "# `Protected Types`";
+        m_strLineTextList << "# `Protected Functions`";
+        m_strLineTextList << "# `Reimplemented Protected Functions`";
+        m_strLineTextList << "# `Protected Slots`";
+        m_strLineTextList << "# `staitc Protected Members`";
+
+        m_strLineTextList << "# `Private Types`";
+        m_strLineTextList << "# `Private Functions`";
+        m_strLineTextList << "# `Private Slots`";
+        m_strLineTextList << "# `Static Private Members`";
+
+        m_strLineTextList << "# `Signals`";
+        m_strLineTextList << "# `Related Non-Members`";
+        m_strLineTextList << "# `Macros`";
+    }
 
     dataToPlainTextEdit();
 }
@@ -112,10 +171,11 @@ void MainWindow::CategorizeData(QMap<QString, QStringList> &mapCatData)
         vctHdrIdxs.append(iIdx);
     }
 
-    //
-    int iLoop = vctHdrIdxs.size();
+    // sort
+    const int iLoop = vctHdrIdxs.size();
     if (iLoop < 2) return;
     for (int i = 0; i < iLoop-1; i++)
+    {
         for (int j = i+1; j < iLoop; j++)
             if (vctHdrIdxs[i] == vctHdrIdxs[j])
                 Q_ASSERT(0);
@@ -124,6 +184,7 @@ void MainWindow::CategorizeData(QMap<QString, QStringList> &mapCatData)
                 vctHdrIdxs[i] = vctHdrIdxs[j];
                 vctHdrIdxs[j] = iTmp;
             }
+    }
 
     //
     int iEnd = -1;
