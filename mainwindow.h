@@ -78,28 +78,59 @@ private:
     QStringList m_strLineTextList;
 
     const QStringList m_strHdrs = {
-    "Properties",
+        "Properties",
 
-    "Public Types",
-    "Public Functions",
-    "Reimplemented Public Functions",
-    "Public Slots",
-    "Static Public Members",
+        "Public Types",
+        "Public Functions",
+        "Reimplemented Public Functions",
+        "Public Slots",
+        "Static Public Members",
 
-    "Protected Types",
-    "Protected Functions",
-    "Reimplemented Protected Functions",
-    "Protected Slots",
-    "staitc Protected Members",
+        "Protected Types",
+        "Protected Functions",
+        "Reimplemented Protected Functions",
+        "Protected Slots",
+        "staitc Protected Members",
 
-    "Private Types",
-    "Private Functions",
-    "Private Slots",
-    "Static Private Members",
+        "Private Types",
+        "Private Functions",
+        "Private Slots",
+        "Static Private Members",
 
-    "Signals",
-    "Related Non-Members",
-    "Macros"
+        "Signals",
+        "Related Non-Members",
+        "Macros"
+    };
+
+    const QStringList m_strFormBeginToDataStruct = {
+        "***",
+        "`Version:` Qt 5.13.0, Qt4.10.0-beta2 (4.98.3)",
+        "`Declaration:`",
+        "`Defination:`",
+        "`Reference:`",
+        "`Keyword:`",
+        "***",
+        "[TOC]",
+        "***",
+        "# `Brief Introduction`",
+        "# `Detailed Description`",
+        "# `Data Struct`",
+        "## `Type Declaration`",
+        "``` {class=line-numbers}",
+        "class Q_CORE_EXPORT QString",
+        "{",
+        "///> 0. Prepare",
+        "///> 1. Properties",
+        "///> 2. Constructors",
+        "///> 3. Functions",
+        "}",
+        "```",
+        "## `Constructor`",
+        "``` {class=line-numbers}",
+        "```",
+        "## `Memory Model`",
+        "``` {class=line-numbers}",
+        "```"
     };
 };
 

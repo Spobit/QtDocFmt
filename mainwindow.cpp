@@ -32,35 +32,7 @@ void MainWindow::keyPressEvent(QKeyEvent* event)
     {
         m_strLineTextList.clear();
 
-        m_strLineTextList << "***"
-                          << "`Version:` Qt 5.13.0, Qt4.10.0-beta2 (4.98.3)"
-                          << "`Declaration:`"
-                          << "`Defination:`"
-                          << "`Reference:`"
-                          << "`Keyword:`"
-                          << "***"
-                          << "[TOC]"
-                          << "***";
-
-        m_strLineTextList << "# `Brief Introduction`"
-                          << "# `Detailed Description`"
-                          << "# `Data Struct`"
-                          << "## `Type Declaration`"
-                          << "``` {class=line-numbers}"
-                          << "class Q_CORE_EXPORT QString"
-                          << "{"
-                          << "///> 0. Prepare"
-                          << "///> 1. Properties"
-                          << "///> 2. Constructors"
-                          << "///> 3. Functions"
-                          << "}"
-                          << "```"
-                          << "## `Constructor`"
-                          << "``` {class=line-numbers}"
-                          << "```"
-                          << "## `Memory Model`"
-                          << "``` {class=line-numbers}"
-                          << "```";
+        m_strLineTextList << m_strFormBeginToDataStruct;
 
         m_strLineTextList << "# `Properties`";
 
@@ -198,35 +170,7 @@ void MainWindow::makeDesiredData(QMap<QString, QStringList> &mapCatData)
 {
     m_strLineTextList.clear();
 
-    m_strLineTextList << "***"
-                      << "`Version:` Qt 5.12.1, QtCreate 4.8.1"
-                      << "`Declaration:`"
-                      << "`Defination:`"
-                      << "`Reference:`"
-                      << "`Keyword:`"
-                      << "***"
-                      << "[TOC]"
-                      << "***";
-
-    m_strLineTextList << "# `Brief Introduction`"
-                      << "# `Detailed Description`"
-                      << "# `Data Struct`"
-                      << "## `Type Declaration`"
-                      << "```"
-                      << "class Q_CORE_EXPORT QString"
-                      << "{"
-                      << "///> 0. Prepare"
-                      << "///> 1. Properties"
-                      << "///> 2. Constructor"
-                      << "///> 3. Functions"
-                      << "}"
-                      << "```"
-                      << "## `Constructor`"
-                      << "```"
-                      << "```"
-                      << "## `Memory Model`"
-                      << "```"
-                      << "```";
+    m_strLineTextList << m_strFormBeginToDataStruct;
 
     QString strFinalHdr, strFinalItem;
     foreach (QString strHdr, m_strHdrs)

@@ -7,7 +7,7 @@
 QT       += core gui widgets
 
 TARGET = "QtDocmentationFormatTransfer-Esc"
-DESTDIR = $${PWD}/bin
+DESTDIR = $${PWD}/build
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
