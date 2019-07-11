@@ -33,7 +33,7 @@ void MainWindow::keyPressEvent(QKeyEvent* event)
         m_strLineTextList.clear();
 
         m_strLineTextList << "***"
-                          << "`Version:` Qt 5.12.1, QtCreate 4.8.1"
+                          << "`Version:` Qt 5.13.0, Qt4.10.0-beta2 (4.98.3)"
                           << "`Declaration:`"
                           << "`Defination:`"
                           << "`Reference:`"
@@ -46,20 +46,20 @@ void MainWindow::keyPressEvent(QKeyEvent* event)
                           << "# `Detailed Description`"
                           << "# `Data Struct`"
                           << "## `Type Declaration`"
-                          << "```"
+                          << "``` {class=line-numbers}"
                           << "class Q_CORE_EXPORT QString"
                           << "{"
                           << "///> 0. Prepare"
                           << "///> 1. Properties"
-                          << "///> 2. Constructor"
+                          << "///> 2. Constructors"
                           << "///> 3. Functions"
                           << "}"
                           << "```"
                           << "## `Constructor`"
-                          << "```"
+                          << "``` {class=line-numbers}"
                           << "```"
                           << "## `Memory Model`"
-                          << "```"
+                          << "``` {class=line-numbers}"
                           << "```";
 
         m_strLineTextList << "# `Properties`";
@@ -263,7 +263,7 @@ void MainWindow::ensureSpaceAfterStarChar()
 
 void MainWindow::dataToPlainTextEdit()
 {
-    m_strFinalText = m_strLineTextList.join("\n");
+    m_strFinalText = m_strLineTextList.join("\n\n");
 
     ui->plainTextEdit->setPlainText(m_strFinalText);
 }
