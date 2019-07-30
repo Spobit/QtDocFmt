@@ -114,6 +114,7 @@ private:
         "***",
         "# `Brief Introduction`",
         "# `Detailed Description`",
+        "# `Simple User Guide`",
         "# `Data Struct`",
         "## `Type Declaration`",
         "``` {class=line-numbers}",
