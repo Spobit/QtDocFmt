@@ -32,6 +32,7 @@ protected:
     void ensureSpaceAfterStarChar();
     void makeSpacesToSpace();
     void ensuerNonSpaceStarSpaceFmt();
+    void removeEnumContent(QMap<QString, QStringList>& mapCatData);
 
     //
     void CategorizeData(QMap<QString, QStringList>& mapCatData);

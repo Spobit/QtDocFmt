@@ -74,6 +74,7 @@ int MainWindow::makeFinalData()
 
     QMap<QString, QStringList> mapCatData;
     CategorizeData(mapCatData);
+    removeEnumContent(mapCatData);
     makeDesiredData(mapCatData);
 
     dataToPlainTextEdit();
@@ -126,6 +127,30 @@ void MainWindow::ensuerNonSpaceStarSpaceFmt()
     m_strLineTextList.replaceInStrings(" * ", "* ");
     m_strLineTextList.replaceInStrings(" *", "* ");
     m_strLineTextList.replaceInStrings("* >", "*>");
+}
+
+void MainWindow::removeEnumContent(QMap<QString, QStringList>& mapCatData)
+{
+    QStringList headers = {"Public Types", "Protected Types", "Private Types"};
+    for (int i = 0; i < headers.size(); i++)
+    {
+        if (mapCatData.contains(headers[i]))
+        {
+            QStringList& lst = mapCatData[headers[i]];
+            for (int j = 0; j < lst.size(); j++)
+            {
+                QString& line = lst[j];
+                if (0 == line.indexOf("enum"))
+                {
+                    int secondSpace = line.indexOf(" ", 6);
+                    if (secondSpace > 6)
+                    {
+                        line = line.left(secondSpace);
+                    }
+                }
+            }
+        }
+    }
 }
 
 void MainWindow::CategorizeData(QMap<QString, QStringList> &mapCatData)
