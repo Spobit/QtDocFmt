@@ -34,28 +34,28 @@ void MainWindow::keyPressEvent(QKeyEvent* event)
 
         m_strLineTextList << m_strFormBeginToDataStruct;
 
-        m_strLineTextList << "# `Properties`";
+        m_strLineTextList << "## `Properties`";
 
-        m_strLineTextList << "# `Public Types`";
-        m_strLineTextList << "# `Public Functions`";
-        m_strLineTextList << "# `Reimplemented Public Functions`";
-        m_strLineTextList << "# `Public Slots`";
-        m_strLineTextList << "# `Static Public Members`";
+        m_strLineTextList << "## `Public Types`";
+        m_strLineTextList << "## `Public Functions`";
+        m_strLineTextList << "## `Reimplemented Public Functions`";
+        m_strLineTextList << "## `Public Slots`";
+        m_strLineTextList << "## `Static Public Members`";
 
-        m_strLineTextList << "# `Protected Types`";
-        m_strLineTextList << "# `Protected Functions`";
-        m_strLineTextList << "# `Reimplemented Protected Functions`";
-        m_strLineTextList << "# `Protected Slots`";
-        m_strLineTextList << "# `staitc Protected Members`";
+        m_strLineTextList << "## `Protected Types`";
+        m_strLineTextList << "## `Protected Functions`";
+        m_strLineTextList << "## `Reimplemented Protected Functions`";
+        m_strLineTextList << "## `Protected Slots`";
+        m_strLineTextList << "## `staitc Protected Members`";
 
-        m_strLineTextList << "# `Private Types`";
-        m_strLineTextList << "# `Private Functions`";
-        m_strLineTextList << "# `Private Slots`";
-        m_strLineTextList << "# `Static Private Members`";
+        m_strLineTextList << "## `Private Types`";
+        m_strLineTextList << "## `Private Functions`";
+        m_strLineTextList << "## `Private Slots`";
+        m_strLineTextList << "## `Static Private Members`";
 
-        m_strLineTextList << "# `Signals`";
-        m_strLineTextList << "# `Related Non-Members`";
-        m_strLineTextList << "# `Macros`";
+        m_strLineTextList << "## `Signals`";
+        m_strLineTextList << "## `Related Non-Members`";
+        m_strLineTextList << "## `Macros`";
     }
 
     dataToPlainTextEdit();
@@ -179,13 +179,13 @@ void MainWindow::makeDesiredData(QMap<QString, QStringList> &mapCatData)
         {
             if (strHdr == it.key())
             {
-                strFinalHdr = QString("# `%1`").arg(strHdr);
+                strFinalHdr = QString("## `%1`").arg(strHdr);
                 m_strLineTextList << strFinalHdr;
 
                 QStringList& strItems = it.value();
                 foreach (QString strItem, strItems)
                 {
-                    strFinalItem = QString("###### `%1`").arg(strItem);
+                    strFinalItem = QString("### `%1`").arg(strItem);
                     m_strLineTextList << strFinalItem;
                     if ("Macros" == strHdr) continue;
                     m_strLineTextList << "`Interpretation:`"
